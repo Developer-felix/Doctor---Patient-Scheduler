@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block appointment_form %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <section id="form-wrapper">
+            <form method="POST" class="appointment-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </form>
+        </section>
+    </div>
+</div>
+{% endblock %}
