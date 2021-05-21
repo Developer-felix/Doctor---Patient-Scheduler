@@ -8,19 +8,19 @@ class Appointment(models.Model):
         unique_together = ('doctor', 'date', 'timeslot')
 
     TIMESLOT_LIST = (
-        (0, '09:00 – 10:00'),
-        (1, '10:00 – 11:00'),
-        (2, '11:00 – 12:00'),
-        (3, '12:00 – 13:00'),
-        (4, '13:00 – 14:00'),
-        (5, '14:00 – 15:00'),
-        (6, '15:00 – 16:00'),
-        (7, '16:00 – 17:00'),
-        (8, '17:00 – 18:00'),
+        (0, '09:00 – 09:30'),
+        (1, '10:00 – 10:30'),
+        (2, '11:00 – 11:30'),
+        (3, '12:00 – 12:30'),
+        (4, '13:00 – 13:30'),
+        (5, '14:00 – 14:30'),
+        (6, '15:00 – 15:30'),
+        (7, '16:00 – 16:30'),
+        (8, '17:00 – 17:30'),
     )
 
     doctor = models.ForeignKey('Doctor',on_delete = models.CASCADE)
-    date = models.DateField()
+    date = models.DateField(help_text="YYYY-MM-DD")
     timeslot = models.IntegerField(choices=TIMESLOT_LIST)
     patient_name = models.CharField(max_length=60)
 

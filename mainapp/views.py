@@ -8,7 +8,7 @@ def new_appointment(request):
         form = AppointmentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('')
+            return redirect('/')
     else:
         form = AppointmentForm()
     return render(request, 'appointment_form.html', {'form': form})
