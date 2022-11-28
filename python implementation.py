@@ -1,6 +1,6 @@
 import time
-doctors = {"Smith": "Anesthesiologist", 'Johnson': 'Cardiologist', "Williams":"Dermatologist", "Jones":"Neurologist", "Ugwonali":"Orthopedic Surgeon"}
-timing =  ['9.00am', '9.30am', '10.00am','10.30am','11.00am','11.30am','12.00pm','12.30pm','1.00pm','3.00pm','3.30pm','4.00pm','4.30pm','5.00pm','5.30pm','6.00pm', '6.30pm', '7.00pm','7.30pm','8.00pm']
+doctors = {"Anson Smith, MD": "Anesthesiologist", 'Dominic Johnson, MD': 'Cardiologist', "Jennifer Williams, MD":"Dermatologist", "Melissa Jones, MD":"Neurologist", "Obi Ugwonali, MD":"Orthopedic Surgeon"}
+timing =  ['9.00am', '9.30am', '10.00am','10.30am','11.00am','11.30am','12.00pm','12.30pm','1.00pm','3.00pm','3.30pm','4.00pm','4.30pm','5.00pm']
 class Patient(object):
     def __int__(self,dc,sp,fn,ln,age,date):
         self.dc = dc
@@ -26,7 +26,7 @@ class Patient(object):
         return appointment_schedule
 
 while(True):
-    print ("Welcome to Kaiser Hospitals")
+    print ("Welcome to Python Specialist Providers")
     print ("\n")
     print ("Here are the list of doctors and his/her specialists")
     print ("\n\n")
