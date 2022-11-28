@@ -64,12 +64,12 @@ while(True):
         else:
             break
     while (True):
-        date = input("Please enter the data on which date you want appointment (Format of date : MM-DD-YEAR):")
+        date = input("Please enter your desired appointment date and time (Format of date : MM-DD-YEAR):")
         if (date == ""):
             print ("Please enter correct date")
         x = time.strftime("%A", time.strptime(date, "%m-%d-%Y"))
         if (x == 'Saturday' or x == 'Sunday'):
-            print ("Cannot schedule an appointment becuase it is an weekend Please choose an other date")
+            print ("Weekend appointments are not available, Please choose an other date")
         else:
             break
     reference  =  Patient()
