@@ -69,7 +69,7 @@ while(True):
             print ("Please enter correct date")
         x = time.strftime("%A", time.strptime(date, "%m-%d-%Y"))
         if (x == 'Saturday' or x == 'Sunday'):
-            print ("Weekend appointments are not available Please choose an other date and time ")
+            print ("Weekend appointments are not available Please choose a different date and time ")
         else:
             break
     reference  =  Patient()
